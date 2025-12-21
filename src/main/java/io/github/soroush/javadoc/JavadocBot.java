@@ -49,7 +49,7 @@ public final class JavadocBot {
 
     private static void printReport(List<MissingDoc> missingDocs) {
         if (missingDocs.isEmpty()) {
-            System.out.println("No missing Javadoc found.");
+            System.out.println("No missing Javadoc found. ");
             return;
         }
 
