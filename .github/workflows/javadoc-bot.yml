@@ -33,7 +33,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          mvn exec:java -e \
+          mvn -e -q -DskipTests compile exec:java \
             -Dexec.mainClass=io.github.soroush.javadoc.JavadocBot \
             -Dexec.args="--base origin/${{ github.event.pull_request.base.ref }}"
 
