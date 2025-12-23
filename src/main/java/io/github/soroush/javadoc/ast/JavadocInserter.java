@@ -51,13 +51,6 @@ public final class JavadocInserter {
         return true;
     }
 
-    /**
-     * /**
-     *  Generated JavaDoc (stub).
-     *
-     *  This documentation was generated automatically.
-     * /
-     */
     private static Optional<? extends NodeWithJavadoc<?>> findTargetNode(CompilationUnit cu, MissingDoc doc) {
         return switch(doc.getKind()) {
             case CLASS, INTERFACE ->
