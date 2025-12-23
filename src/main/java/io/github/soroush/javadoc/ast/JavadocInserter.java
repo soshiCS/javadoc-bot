@@ -51,6 +51,15 @@ public final class JavadocInserter {
         return true;
     }
 
+    /**
+     * /**
+     *  Finds the target node in the given compilation unit based on the type of missing documentation.
+     *
+     *  @param cu the compilation unit to search within
+     *  @param doc the missing documentation containing the target node's details
+     *  @return an Optional containing the found node with Javadoc, or an empty Optional if not found
+     * /
+     */
     private static Optional<? extends NodeWithJavadoc<?>> findTargetNode(CompilationUnit cu, MissingDoc doc) {
         return switch(doc.getKind()) {
             case CLASS, INTERFACE ->
