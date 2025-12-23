@@ -7,11 +7,7 @@ import com.github.javaparser.ast.CompilationUnit;
 import java.io.IOException;
 import java.nio.file.Path;
 
-/**
- * /**
- *  TODO: add documentation.
- * /
- */
+
 public final class AstParser {
 
     private static final JavaParser PARSER;
