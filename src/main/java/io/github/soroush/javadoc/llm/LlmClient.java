@@ -7,11 +7,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-/**
- * /**
- *  Represents a client for interacting with a language model.
- * /
- */
+
 public final class LlmClient {
 
     private static final String API_URL = "https://api.openai.com/v1/chat/completions";
@@ -22,12 +18,6 @@ public final class LlmClient {
 
     private static final String API_KEY = System.getenv("OPENAI_API_KEY");
 
-    /**
-     * /**
-     *  Constructs a new instance of the LlmClient class.
-     *  This constructor is private and cannot be accessed outside the class.
-     * /
-     */
     private LlmClient() {
     }
 
