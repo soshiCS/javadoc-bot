@@ -71,11 +71,26 @@ public final class JavadocInserter {
         };
     }
 
-
+    /**
+     * /**
+     *  Generates a string representation of the method signature, including its parameters.
+     *
+     *  @param m the MethodDeclaration for which to generate the signature
+     *  @return a string representing the method's parameter types enclosed in parentheses
+     * /
+     */
     private static String signature(MethodDeclaration m) {
         return m.getParameters().stream().map(p -> p.getType().asString()).reduce("(", (a, b) -> a.equals("(") ? "(" + b : a + ", " + b) + ")";
     }
-    
+
+    /**
+     * /**
+     *  Generates a string representation of the parameter types of a constructor.
+     *
+     *  @param c the ConstructorDeclaration to extract parameter types from
+     *  @return a string representing the parameter types enclosed in parentheses
+     * /
+     */
     private static String signature(ConstructorDeclaration c) {
         return c.getParameters().stream().map(p -> p.getType().asString()).reduce("(", (a, b) -> a.equals("(") ? "(" + b : a + ", " + b) + ")";
     }

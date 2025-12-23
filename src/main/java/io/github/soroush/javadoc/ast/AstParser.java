@@ -7,7 +7,11 @@ import com.github.javaparser.ast.CompilationUnit;
 import java.io.IOException;
 import java.nio.file.Path;
 
-
+/**
+ * /**
+ *  The AstParser class is responsible for parsing abstract syntax trees (ASTs).
+ * /
+ */
 public final class AstParser {
 
     private static final JavaParser PARSER;
