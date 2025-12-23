@@ -71,13 +71,7 @@ public final class JavadocInserter {
         };
     }
 
-    /**
-     * /**
-     *  Generated JavaDoc (stub).
-     *
-     *  This documentation was generated automatically.
-     * /
-     */
+
     private static String signature(MethodDeclaration m) {
         return m.getParameters().stream().map(p -> p.getType().asString()).reduce("(", (a, b) -> a.equals("(") ? "(" + b : a + ", " + b) + ")";
     }
