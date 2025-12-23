@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 /**
  * /**
- *  TODO: add documentation.
+ *  The AstParser class is responsible for parsing abstract syntax trees (ASTs).
  * /
  */
 public final class AstParser {
