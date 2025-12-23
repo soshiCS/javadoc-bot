@@ -33,9 +33,10 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          mvn -q exec:java \
+          mvn exec:java -e \
             -Dexec.mainClass=io.github.soroush.javadoc.JavadocBot \
             -Dexec.args="--base origin/${{ github.event.pull_request.base.ref }}"
+
 
       - name: Commit generated Javadoc
         run: |
