@@ -53,9 +53,11 @@ public final class JavadocInserter {
 
     /**
      * /**
-     *  Generated JavaDoc (stub).
+     *  Finds the target node in the given compilation unit based on the type of missing documentation.
      *
-     *  This documentation was generated automatically.
+     *  @param cu the compilation unit to search within
+     *  @param doc the missing documentation containing the target node's details
+     *  @return an Optional containing the found node with Javadoc, or an empty Optional if not found
      * /
      */
     private static Optional<? extends NodeWithJavadoc<?>> findTargetNode(CompilationUnit cu, MissingDoc doc) {
@@ -73,9 +75,10 @@ public final class JavadocInserter {
 
     /**
      * /**
-     *  Generated JavaDoc (stub).
+     *  Generates a string representation of the method signature, including its parameters.
      *
-     *  This documentation was generated automatically.
+     *  @param m the MethodDeclaration for which to generate the signature
+     *  @return a string representing the method's parameter types enclosed in parentheses
      * /
      */
     private static String signature(MethodDeclaration m) {
@@ -84,9 +87,10 @@ public final class JavadocInserter {
 
     /**
      * /**
-     *  Generated JavaDoc (stub).
+     *  Generates a string representation of the parameter types of a constructor.
      *
-     *  This documentation was generated automatically.
+     *  @param c the ConstructorDeclaration to extract parameter types from
+     *  @return a string representing the parameter types enclosed in parentheses
      * /
      */
     private static String signature(ConstructorDeclaration c) {
